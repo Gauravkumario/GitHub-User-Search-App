@@ -23,7 +23,7 @@ const Profile = (props) => {
   const formattedDate = date.toLocaleDateString("en-US", options);
   return (
     <>
-      <div className="github-profile-container shadow-lg rounded-lg px-6 py-8 text-white">
+      <div className="github-profile-container shadow-lg rounded-lg px-6 py-8">
         {message === "Not Found" ? (
           <h2 className="text-center">User Not Found</h2>
         ) : (
