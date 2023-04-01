@@ -23,13 +23,13 @@ const Profile = (props) => {
   const formattedDate = date.toLocaleDateString("en-US", options);
   return (
     <>
-      <div className="github-profile-container shadow-lg rounded-lg p-8 text-white">
+      <div className="github-profile-container shadow-lg rounded-lg px-6 py-8 text-white">
         {message === "Not Found" ? (
           <h2 className="text-center">User Not Found</h2>
         ) : (
           <>
-            <div className="flex mb-4">
-              <div className="w-1/5">
+            <div className="parenttt">
+              <div className="div111">
                 <img
                   src={avatar_url}
                   alt="profile"
@@ -37,8 +37,8 @@ const Profile = (props) => {
                   className="rounded-full mr-4"
                 />
               </div>
-              <div className="w-4/5 ml-8">
-                <div className="flex justify-between items-start">
+              <div className="div222">
+                <div className="name-container flex justify-between items-start">
                   <div>
                     <h2 className="text-xl font-bold">
                       {name === null ? "Not Available" : name}
@@ -49,17 +49,17 @@ const Profile = (props) => {
                       </a>
                     </h3>
                   </div>
-                  <h2>
+                  <h2 className="sm:text-sm">
                     Joined <time>{formattedDate}</time>
                   </h2>
-                </div>
-                <div>
-                  {bio === null ? (
-                    <p className="text-grey-500">Profile has no bio</p>
-                  ) : (
-                    <p>{bio}</p>
-                  )}
-                </div>
+                </div>{" "}
+              </div>
+              <div className="div333">
+                {bio === null ? (
+                  <p className="text-grey-500">Profile has no bio</p>
+                ) : (
+                  <p>{bio}</p>
+                )}{" "}
               </div>
             </div>
 

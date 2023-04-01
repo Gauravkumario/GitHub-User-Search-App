@@ -15,7 +15,7 @@ body {
 }
 
 .App {
-  width: 720px;
+  width: 650px;
 }
 
 .github-profile-container,
@@ -34,11 +34,49 @@ p {
   margin: 1rem 0;
 }
 
+.parenttt {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div111 {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.div222 {
+  grid-area: 1 / 2 / 2 / 5;
+}
+.div333 {
+  grid-area: 2 / 2 / 3 / 5;
+}
+
+@media only screen and (max-width: 520px) {
+  .parenttt {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+  }
+
+  .div111 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div222 {
+    grid-area: 1 / 2 / 2 / 5;
+  }
+  .div333 {
+    grid-area: 2 / 1 / 3 / 5;
+  }
+}
+
 .parentt {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
+  grid-column-gap: 8px;
   grid-row-gap: 8px;
   background-color: #141d2f;
   padding: 0.5rem 2rem;
@@ -86,6 +124,29 @@ p {
 }
 .div4 {
   grid-area: 2 / 2 / 3 / 3;
+}
+
+@media only screen and (max-width: 768px) {
+  .App {
+    width: 80%;
+  }
+  .parentt {
+    width: 100%;
+  }
+  .parent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .App {
+    width: 90%;
+  }
+  .name-container {
+    flex-direction: column;
+  }
 }
 
 /*https://ionic.io/ionicons*/
